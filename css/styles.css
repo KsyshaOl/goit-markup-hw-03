@@ -1,9 +1,26 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    color: #434455;
-    background-color: #FFFFFF;
-    font-style: normal;
+/* ============== COMMON STYLES ============== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+    display: block;
+  }
 
 .list {
     list-style-type: none;
@@ -13,7 +30,51 @@ body {
     text-decoration: none;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #434455;
+    background-color: #FFFFFF;
+    font-style: normal;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+  
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+  /* ============== /COMMON STYLES ============== */
+
     /* --------- HEADER ----------- */
+.page-header {
+    border-bottom: 1px solid #e7e9fc;
+}
+
+    .page-header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-nav {
+    display: flex;
+    align-items: center;
+}
 
 .header-logo-link {
     color: #4D5AE5;
@@ -23,20 +84,29 @@ body {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    margin-right: 76px;
+    margin-left: 156px;
     }
 
 .header-logo-studio {
-    color: #2E2F42;
-    
+    color: #2E2F42;  
+}
+
+.menu-list {
+    display: flex;
+    gap: 40px;
 }
 
 
 .menu-link {
     color: #2E2F42;
+    display: block;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5; 
     letter-spacing: 0.02em;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .menu-link:hover,
@@ -51,43 +121,70 @@ body {
 .contacts {
     font-style:normal;
 }
+
+.contacts-list {
+    display: flex;
+    gap: 40px;
+
+
+}
+
 .contacts-link {
     color: #434455;
+    display: block;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .contacts-link:hover, 
 .contacts-link:focus {
     color: #404BBF;
 }
+
+
 /* --------- /HEADER --------- */
 
 
 /* ----------- HERO-------- */
 .page-hero {
     background-color: #2E2F42;
+    padding-top: 188px;
+    padding-bottom: 188px;
 }
 
 .hero-title {
     color: #FFFFFF;
     text-align: center;
+    width: 496px;
     font-size: 56px;
     font-weight: 700;
     line-height: 1.07;
     letter-spacing: 0.02em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 48px;
 }
 
 .hero-button {
     color: #FFFFFF;
+    display: block;
     background-color: #4D5AE5;
-    cursor: pointer;   
+    cursor: pointer; 
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);  
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
+    margin-top: 48px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px 32px;
 }
 
 .hero-button:hover,
@@ -99,13 +196,30 @@ body {
 
 
 /* -------- ADVANTAGES  -------- */
+.advantages-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
 
+.advantages-list {
+    display: flex;
+    gap: 24px;
+}
+
+.advantages-item {
+     width: calc((100% - 72px) / 4);
+}
+
+.adventages-item:not(:last-child) {
+    margin-right: 24px;
+}
 .advantages-subtitle {
     color: #2E2F42;
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2; 
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 
 .advantages-text {
@@ -113,21 +227,24 @@ body {
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
+
 }
 
 /* ---------- /ADVANTAGES ---------- */
+
 
 /* ----------- TEAM ------------- */
 
 .team-section {
     background-color: #F4F4FD;
-}
-
-.team-item {
-    background-color: #FFFFFF;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .team-title {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 72px;
     color: #2E2F42;
     text-align: center;
     font-size: 36px;
@@ -135,6 +252,19 @@ body {
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+}
+
+.team-list {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+
+}
+
+.team-item {
+    width: calc((100% - 72px) / 4);
+    background-color: #FFFFFF;
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-subtitle {
@@ -144,6 +274,7 @@ body {
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 
 .team-desc {
@@ -153,10 +284,18 @@ body {
     letter-spacing: 0.02em;
 }
 
+.team-card-text {
+    padding: 32px 0;
+}
+
 /* -------- / TEAM ------------- */
 
 
 /* ---------- PORTFOLIO --------  */
+.our-works {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
 
 .works-title {
     color: #2E2F42;
@@ -166,6 +305,24 @@ body {
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    margin-bottom: 72px;
+}
+
+.works-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
+}
+
+.works-item {
+    width: calc((100% - 48px) / 3);
+}
+
+.works-card-text {
+    padding: 32px 16px;
+    border: 1px solid #E7E9FC;
+    border-top: none;
 }
 
 .works-subtitle {
@@ -174,6 +331,7 @@ body {
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 
 .works-desc {
@@ -189,13 +347,11 @@ body {
 
 .footer {
     background-color: #2E2F42;
-}
-
-.footer-logo-studio {
-    color: #F4F4FD;
+    padding: 100px 0;
 }
 
 .footer-logo-link {
+    display: inline-block;
     color: #4D5AE5;
     font-size: 18px;
     font-family: Raleway, sans-serif;
@@ -203,6 +359,12 @@ body {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    margin-bottom: 18px;
+
+}
+
+.footer-logo-studio {
+    color: #F4F4FD;
 }
 
 .footer-text {
@@ -210,5 +372,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    max-width: 264px;
 }
 
+/* ---------- /FOOTER ---------- */
